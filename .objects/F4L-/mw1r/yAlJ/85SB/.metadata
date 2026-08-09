@@ -1,0 +1,14 @@
+﻿{
+  "Name": "Microsoft.UI.Content.De…",
+  "Type": "Element",
+  "TaxonomyType": "None",
+  "Id": "85SBc38_bEKX8ANLe-jFzQ",
+  "Reference": "gi6lbE8E2UWyydgSuwEIUw/85SBc38_bEKX8ANLe-jFzQ",
+  "ParentRef": "gi6lbE8E2UWyydgSuwEIUw/yAlJZIo-n0ikTOnMS-XPlQ",
+  "Created": "2026-06-30T11:41:45.6473331Z",
+  "Updated": "2026-06-30T11:41:45.6473331Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=26.10.0.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=26.4.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

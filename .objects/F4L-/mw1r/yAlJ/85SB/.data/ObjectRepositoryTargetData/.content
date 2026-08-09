@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="SflDRsZsr0SfbRhLAw2hmg" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" DesignTimeRectangle="6, 42, 1296, 33" DesignTimeScaleFactor="1" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;wnd cls='Microsoft.UI.Content.DesktopChildSiteBridge' idx='4' /&gt;" FuzzySelectorArgument="&lt;wnd cls='Microsoft.UI.Content.DesktopChildSiteBridge' /&gt;" Guid="05943c0d-aa37-49b5-a550-e58d46507c7f" ScopeSelectorArgument="&lt;wnd app='notepad.exe' appid='Microsoft.WindowsNotepad_8wekyb3d8bbwe!App' title='Untitled - Notepad' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive">
+      <TargetAnchorable.PointOffset>
+        <PointOffset />
+      </TargetAnchorable.PointOffset>
+      <imageRef attrName="InformativeScreenshot" originalValue="c77c3e4e8923e33d5787e28b0a7f2058.jpg" xmlns="">0HAEn-xK5ykq4zWsCDCAVDA</imageRef>
+    </TargetAnchorable>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

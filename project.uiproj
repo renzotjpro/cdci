@@ -1,0 +1,6 @@
+{
+  "Name": "CDCI",
+  "ProjectType": "Process",
+  "Description": "Blank Process",
+  "MainFile": "Main.xaml"
+}

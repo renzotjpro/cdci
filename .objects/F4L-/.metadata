@@ -1,0 +1,12 @@
+﻿{
+  "Name": "Untitled - Notepad_App",
+  "Type": "App",
+  "Id": "F4L-1X_7y06TLt_tbfcFzw",
+  "Reference": "gi6lbE8E2UWyydgSuwEIUw/F4L-1X_7y06TLt_tbfcFzw",
+  "Created": "2026-06-30T11:41:44.1427795Z",
+  "Updated": "2026-06-30T11:41:44.1427795Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=26.10.0.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=26.4.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}
