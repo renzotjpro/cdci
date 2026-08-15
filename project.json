@@ -8,7 +8,7 @@
     "UiPath.FormActivityLibrary": "[2.0.7]",
     "UiPath.MicrosoftOffice365.Activities": "[3.9.11]",
     "UiPath.Persistence.Activities": "[1.10.1]",
-    "UiPath.System.Activities": "[26.6.0]",
+    "UiPath.System.Activities": "[25.10.0]",
     "UiPath.UIAutomation.Activities": "[26.10.0]"
   },
   "webServices": [],

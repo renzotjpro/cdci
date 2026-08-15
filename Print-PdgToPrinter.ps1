@@ -1,0 +1,56 @@
+param(
+    [Parameter(Mandatory = $true)]
+    [string]$PdfPath,
+
+    [Parameter(Mandatory = $false)]
+    [string]$PrinterName = "Lan P"
+)
+
+# --- Validate inputs -------------------------------------------------------
+
+if (-not (Test-Path -LiteralPath $PdfPath)) {
+    Write-Error "PDF file not found: $PdfPath"
+    exit 1
+}
+
+$resolvedPath = (Resolve-Path -LiteralPath $PdfPath).Path
+
+$printerExists = Get-Printer -Name $PrinterName -ErrorAction SilentlyContinue
+if (-not $printerExists) {
+    Write-Warning "Printer '$PrinterName' was not found in the installed printer list. Attempting anyway check the exact name with Get-Printer if this fails."
+}
+
+# --- Print via the shell's PrintTo verb -------------------------------------
+
+try {
+    Write-Host "Sending '$resolvedPath' to printer '$PrinterName'..."
+
+    $psi = New-Object System.Diagnostics.ProcessStartInfo
+    $psi.FileName        = $resolvedPath
+    $psi.Verb             = "printto"
+    $psi.Arguments        = "`"$PrinterName`""
+    $psi.UseShellExecute  = $true
+    $psi.WindowStyle      = "Hidden"
+
+    $process = [System.Diagnostics.Process]::Start($psi)
+
+    # Give the handler app a moment to spool the job, then close it if it
+    # stays open (some PDF viewers don't auto-exit after PrintTo).
+    Start-Sleep -Seconds 5
+    if ($process -and -not $process.HasExited) {
+        try { $process.CloseMainWindow() | Out-Null } catch {}
+    }
+
+    Write-Host "Print job sent to '$PrinterName'."
+}
+catch {
+    Write-Error "Failed to print '$resolvedPath' to '$PrinterName': $_"
+    exit 1
+}
+
+# --- Fallback note -----------------------------------------------------------
+# If PrintTo fails because no installed app registers that verb for .pdf,
+# install SumatraPDF (free, portable) and swap the block above for:
+#
+#   & "C:\Path\To\SumatraPDF.exe" -print-to 
+#
