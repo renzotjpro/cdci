@@ -22,8 +22,14 @@ steps:
     projectJsonPath: '$(Build.SourcesDirectory)'
     versionType: 'AutoVersion'
     outputPath: '$(Build.ArtifactStagingDirectory)\Output'
+    traceLevel: 'Information'
+- task: UiPathTest@6
+  inputs:
+    testTarget: 'TestProject'
+    orchestratorConnection: 'Uipath Orch'
+    folderName: 'Shared'
 - task: PublishBuildArtifacts@1
   inputs:
      PathtoPublish: '$(Build.ArtifactStagingDirectory)'
-     ArtifactName: 'drop'
+     ArtifactName: 'Pack_Test_Pipeline'
      publishLocation: 'Container'
