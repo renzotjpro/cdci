@@ -28,9 +28,10 @@ steps:
     orchestratorConnection: 'Uipath Orch'
     traceLevel: 'Information'
 
+
 - task: UiPathDeploy@6
   inputs:
-    orchestratorConnection: 'Uipath Orch'
+    orchestratorConnection: 'TestingProd'
     packagesPath: '$(Build.ArtifactStagingDirectory)\Output'
     folderName: '$(folderName)'
     traceLevel: 'Information'
