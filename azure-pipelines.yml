@@ -4,6 +4,7 @@
 # https://aka.ms/yaml
 variables:
   projectPath: project.json
+  folderName: Shared
 trigger:
 - main
 
@@ -25,4 +26,11 @@ steps:
     versionType: 'AutoVersion'
     outputPath: '$(Build.ArtifactStagingDirectory)\Output'
     orchestratorConnection: 'Uipath Orch'
+    traceLevel: 'Information'
+
+- task: UiPathDeploy@6
+  inputs:
+    orchestratorConnection: 'Uipath Orch'
+    packagesPath: '$(Build.ArtifactStagingDirectory)\Output'
+    folderName: '$(folderName)'
     traceLevel: 'Information'
